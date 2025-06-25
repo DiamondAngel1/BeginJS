@@ -1,16 +1,16 @@
-function quantChocolates() {
-    var moneyInput = prompt("Скільки грошей у вас у гаманці?");
-    var priceInput = prompt("Яка вартість однієї шоколадки?");
+function reverse() {
+    var input = prompt("Введіть тризначне число:");
+    var number = parseInt(input);
 
-    var money = parseFloat(moneyInput);
-    var price = parseFloat(priceInput);
+    if (!isNaN(number) && number >= 100 && number <= 999) {
+        var last = number % 10;
+        var middle = Math.floor((number % 100) / 10);
+        var first = Math.floor(number / 100);
+        var reversed = last * 100 + middle * 10 + first;
 
-    if (!isNaN(money) && !isNaN(price) && money >= 0 && price > 0) {
-        var count = Math.floor(money / price);
-        var change = money - count * price;
-        alert("Ви можете купити " + count + " шоколадок.\nЗдача: " + change + " грн.");
+        alert("Число паліндром: " + reversed);
     } 
     else {
-        alert("Будь ласка, введіть коректні додатні значення.");
+        alert("Будь ласка, введіть коректне тризначне число.");
     }
 }
