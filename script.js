@@ -1,12 +1,13 @@
-function area() {
-    var input = prompt("Введіть радіус кола:");
-    var radius = parseFloat(input);
-
-    if (!isNaN(radius) && radius > 0) {
-        var area = Math.PI * radius * radius;
-        alert("Площа кола: " + area);
+function calculateSpeed() {
+    var distanceInput = prompt("Введіть відстань у кілометрах:");
+    var timeInput = prompt("За скільки годин ви хочете дістатися:");
+    var distance = parseFloat(distanceInput);
+    var time = parseFloat(timeInput);
+    if (!isNaN(distance) && !isNaN(time) && distance > 0 && time > 0) {
+        var speed = distance / time;
+        alert("Необхідна швидкість: " + speed + " км/год");
     } 
     else {
-        alert("Будь ласка, введіть коректне додатне число.");
+        alert("Будь ласка, введіть коректні додатні значення.");
     }
 }
