@@ -1,12 +1,14 @@
-function converter() {
-    const euro = 0.86;
-    var input = prompt("Введіть суму в доларах (USD):");
-    var dollars = parseFloat(input);
-    if (!isNaN(dollars) && dollars >= 0) {
-        var euros = dollars * euro;
-        alert(dollars + " USD = " + euros + " EUR");
+function quantFiles() {
+    var input = prompt("Введіть обсяг флешки в ГБ:");
+    var gb = parseFloat(input);
+
+    if (!isNaN(gb) && gb > 0) {
+        var totalMB = gb * 1024;
+        var fileSizeMB = 820;
+        var count = Math.floor(totalMB / fileSizeMB);
+        alert("На флешку " + gb + " ГБ вміститься " + count + " файлів по 820 МБ");
     } 
     else {
-        alert("Будь ласка, введіть коректну суму.");
+        alert("Будь ласка, введіть коректне додатне число.");
     }
 }
