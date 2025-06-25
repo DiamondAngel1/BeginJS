@@ -1,12 +1,12 @@
-function perimetr() {
-    var side = prompt("Введіть довжину сторони квадрата:");
-    var value = parseFloat(side);
+function area() {
+    var input = prompt("Введіть радіус кола:");
+    var radius = parseFloat(input);
 
-    if (!isNaN(value) && value > 0) {
-        var perimeter = value * value;
-        alert("Периметр квадрата: " + perimeter);
+    if (!isNaN(radius) && radius > 0) {
+        var area = Math.PI * radius * radius;
+        alert("Площа кола: " + area);
     } 
     else {
-        alert("Будь ласка, введіть додатне число.");
+        alert("Будь ласка, введіть коректне додатне число.");
     }
 }
