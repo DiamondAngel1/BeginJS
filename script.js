@@ -1,14 +1,16 @@
-function quantFiles() {
-    var input = prompt("Введіть обсяг флешки в ГБ:");
-    var gb = parseFloat(input);
+function quantChocolates() {
+    var moneyInput = prompt("Скільки грошей у вас у гаманці?");
+    var priceInput = prompt("Яка вартість однієї шоколадки?");
 
-    if (!isNaN(gb) && gb > 0) {
-        var totalMB = gb * 1024;
-        var fileSizeMB = 820;
-        var count = Math.floor(totalMB / fileSizeMB);
-        alert("На флешку " + gb + " ГБ вміститься " + count + " файлів по 820 МБ");
+    var money = parseFloat(moneyInput);
+    var price = parseFloat(priceInput);
+
+    if (!isNaN(money) && !isNaN(price) && money >= 0 && price > 0) {
+        var count = Math.floor(money / price);
+        var change = money - count * price;
+        alert("Ви можете купити " + count + " шоколадок.\nЗдача: " + change + " грн.");
     } 
     else {
-        alert("Будь ласка, введіть коректне додатне число.");
+        alert("Будь ласка, введіть коректні додатні значення.");
     }
 }
