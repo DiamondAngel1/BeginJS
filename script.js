@@ -1,13 +1,12 @@
-function calculateSpeed() {
-    var distanceInput = prompt("Введіть відстань у кілометрах:");
-    var timeInput = prompt("За скільки годин ви хочете дістатися:");
-    var distance = parseFloat(distanceInput);
-    var time = parseFloat(timeInput);
-    if (!isNaN(distance) && !isNaN(time) && distance > 0 && time > 0) {
-        var speed = distance / time;
-        alert("Необхідна швидкість: " + speed + " км/год");
+function converter() {
+    const euro = 0.86;
+    var input = prompt("Введіть суму в доларах (USD):");
+    var dollars = parseFloat(input);
+    if (!isNaN(dollars) && dollars >= 0) {
+        var euros = dollars * euro;
+        alert(dollars + " USD = " + euros + " EUR");
     } 
     else {
-        alert("Будь ласка, введіть коректні додатні значення.");
+        alert("Будь ласка, введіть коректну суму.");
     }
 }
